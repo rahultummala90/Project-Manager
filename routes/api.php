@@ -26,7 +26,7 @@ Route::post('/projects', [ProjectController::class, 'store']);
 Route::get('projects/{id}', [ProjectController::class, 'show']);
 Route::post('projects/{project}', [ProjectController::class, 'markAsCompleted']);
 Route::post('tasks', [TaskController::class, 'store']);
-Route::get('tasks/{task}', [TaskController::class, 'markAsCompleted']);
+Route::post('tasks/{task}', [TaskController::class, 'markAsCompleted']);
 
 // Route::post('/projects', 'ProjectController@store');
 // Route::get('projects/{id}', 'ProjectController@show');
