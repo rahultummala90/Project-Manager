@@ -31,7 +31,6 @@ const SingleProject = () => {
                 project_id: projectId.id,
             })
             .then((response) => {
-                console.log(response);
                 setSuccess("Success! A new task has been created.");
             })
             .catch((error) => {
@@ -40,7 +39,6 @@ const SingleProject = () => {
     };
 
     const markTaskComplete = (taskId) => {
-        console.log("Test");
         axios
             .post(`/api/tasks/${taskId}`)
             .then((response) => {
@@ -66,10 +64,10 @@ const SingleProject = () => {
 
     return (
         <>
-            <div className="mt-10 grid place-items-center w-full">
-                <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div className="mt-10 grid place-items-center w-full bg-gray-100">
+                <div className="mt-10 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div className="mb-5 border-b-2">
-                        <label className="block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2">
+                        <label className="flex justify-center w-full block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2">
                             {project.name}
                         </label>
                         <label>{project.description}</label>

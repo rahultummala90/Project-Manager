@@ -7531,7 +7531,7 @@ var Header = function Header() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
           className: "navbar-brand",
           to: "/",
-          children: "Task Manager"
+          children: "Project Manager"
         })
       })
     })
@@ -7604,14 +7604,14 @@ var NewProject = function NewProject() {
     });
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "grid place-items-center w-full",
+    className: "grid place-items-center w-full bg-gray-100",
     children: [error !== null && error !== void 0 ? error : "", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
-      className: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4",
+      className: "mt-10 w-1/2 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4",
       onSubmit: handleSubmit,
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "mb-5",
+        className: "mb-5 flex justify-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
-          className: "block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2",
+          className: "w-1/4 block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2",
           children: "Create a new project"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -7799,14 +7799,12 @@ var SingleProject = function SingleProject() {
       title: taskTitle,
       project_id: projectId.id
     }).then(function (response) {
-      console.log(response);
       setSuccess("Success! A new task has been created.");
     })["catch"](function (error) {
       setError(error.response.data.message);
     });
   };
   var markTaskComplete = function markTaskComplete(taskId) {
-    console.log("Test");
     axios__WEBPACK_IMPORTED_MODULE_3__["default"].post("/api/tasks/".concat(taskId)).then(function (response) {
       console.log(response);
       setSuccess("Success! Task has been marked as complete.");
@@ -7824,13 +7822,13 @@ var SingleProject = function SingleProject() {
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "mt-10 grid place-items-center w-full",
+      className: "mt-10 grid place-items-center w-full bg-gray-100",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4",
+        className: "mt-10 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "mb-5 border-b-2",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
-            className: "block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2",
+            className: "flex justify-center w-full block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2",
             children: project.name
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
             children: project.description

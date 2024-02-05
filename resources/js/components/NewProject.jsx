@@ -31,14 +31,14 @@ const NewProject = () => {
     };
 
     return (
-        <div className="grid place-items-center w-full">
+        <div className="grid place-items-center w-full bg-gray-100">
             {error ?? ""}
             <form
-                className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                className="mt-10 w-1/2 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                 onSubmit={handleSubmit}
             >
-                <div className="mb-5">
-                    <label className="block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2">
+                <div className="mb-5 flex justify-center">
+                    <label className="w-1/4 block text-gray-700 text-sm font-bold mb-2  bg-gray-100  font-bold rounded-t px-4 py-2">
                         Create a new project
                     </label>
                 </div>

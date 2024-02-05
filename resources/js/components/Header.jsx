@@ -7,7 +7,7 @@ const Header = () => {
             <div className="max-w-screen-xl px-4 py-3 mx-auto">
                 <div className="flex items-center">
                     <Link className="navbar-brand" to="/">
-                        Task Manager
+                        Project Manager
                     </Link>
                 </div>
             </div>
